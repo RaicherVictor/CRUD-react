@@ -44,7 +44,7 @@ function EditStudent() {
           rollno: res.data.data.rollno,
         });
       });
-  }, []);
+  }, [params.id]);
 
   return (
     <div>
@@ -85,7 +85,7 @@ function EditStudent() {
           </div>
           <div className="mb-3">
             <button type="submit" className="btn btn-primary">
-              Update
+              Обновить
             </button>
           </div>
         </form>

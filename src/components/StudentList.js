@@ -33,10 +33,10 @@ function StudentList() {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Roll no</th>
-            <th scope="col">Action</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Почта</th>
+            <th scope="col">Номер</th>
+            <th scope="col">Действие</th>
           </tr>
         </thead>
         <tbody>
@@ -58,7 +58,7 @@ function StudentList() {
                     className="btn btn-danger btn-sm"
                     onClick={() => deleteStudent(user._id)}
                   >
-                    Delete
+                    Удалить
                   </button>
                 </td>
               </tr>

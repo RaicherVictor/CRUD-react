@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-async function CreateStudent() {
+ function CreateStudent() {
   const [userForm, setUserForm] = useState({
     name: "",
     email: "",
@@ -36,7 +36,7 @@ async function CreateStudent() {
       <div className="form-wrapper">
         <form onSubmit={onSubmit}>
           <div className="mb-3">
-            <label className="form-label">Name</label>
+            <label className="form-label">Имя</label>
             <input
               type="text"
               className="form-control"
@@ -47,7 +47,7 @@ async function CreateStudent() {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Email</label>
+            <label className="form-label">Почта</label>
             <input
               type="text"
               className="form-control"
@@ -58,7 +58,7 @@ async function CreateStudent() {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Roll no.</label>
+            <label className="form-label">Номер</label>
             <input
               type="text"
               className="form-control"
@@ -70,7 +70,7 @@ async function CreateStudent() {
           </div>
           <div className="mb-3">
             <button type="submit" className="btn btn-primary">
-              Submit
+              Создать
             </button>
           </div>
         </form>

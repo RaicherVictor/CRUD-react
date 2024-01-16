@@ -3,10 +3,8 @@ let mongoose = require("mongoose");
 let cors = require("cors");
 let bodyParser = require("body-parser");
 
-// Express Route
 const studentRoute = require("./routes/student.routes");
 
-// Connecting mongoDB Database
 mongoose
   .connect("mongodb://127.0.0.1:27017/test")
   .then((x) => {
@@ -28,15 +26,13 @@ app.use(
 app.use(cors());
 app.use("/students", studentRoute);
 
-// PORT
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log("Connected to port " + port);
 });
 
-// 404 Error
 app.use((req, res, next) => {
-  next(createError(404));
+  next(Error(404));
 });
 
 app.use(function (err, req, res, next) {
